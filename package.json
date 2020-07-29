@@ -1,0 +1,44 @@
+{
+  "name": "nodejs-authentication-api",
+  "version": "1.0.0",
+  "description": "A simple nodejs api for authentication with passport and JWT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node --use_strict ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AparnaJoshi007/nodejs-authentication-api.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "Authentication",
+    "Passport",
+    "JWT",
+    "MongoDB"
+  ],
+  "author": "Aparna Joshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AparnaJoshi007/nodejs-authentication-api/issues"
+  },
+  "homepage": "https://github.com/AparnaJoshi007/nodejs-authentication-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "nodemon": "^2.0.4"
+  }
+}
