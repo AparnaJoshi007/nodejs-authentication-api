@@ -10,6 +10,8 @@ import dotenv from 'dotenv';
 
 import connect from './models';
 import { router as authRoutes, setUserModel } from './routes/auth';
+import { router as postRoutes } from './routes/posts';
+import authenticate from './middleware/authenticate';
 import getLocalSignupStrategy from './passport/local-signup';
 import getLocalLoginStrategy from './passport/local-login';
 
@@ -29,7 +31,7 @@ app.use(passport.initialize());
 passport.use('local-signup', getLocalSignupStrategy(User));
 passport.use('local-login', getLocalLoginStrategy(User));
 app.use('/auth', authRoutes);
-
+app.use('/api', authenticate, postRoutes);
 
 app.listen(DEFAULT_PORT, HOST, err => {
   if (err) {
