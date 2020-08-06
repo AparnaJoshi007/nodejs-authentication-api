@@ -1,4 +1,5 @@
 import { Strategy as PassportLocalStrategy } from 'passport-local';
+import { sign } from 'jsonwebtoken';
 
 const getStrategy = (User) => new PassportLocalStrategy({
   usernameField: 'email',
@@ -20,7 +21,7 @@ const getStrategy = (User) => new PassportLocalStrategy({
     }
 
     done(null, 
-      sign({ id }, process.env.ACCESS_TOKEN_SECRET));
+      sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET));
   } catch (e) {
     console.error(e);
     done('Some unknown error');
