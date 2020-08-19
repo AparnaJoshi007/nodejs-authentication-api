@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-authentication-api",
+  "name": "@aparnajoshi007/nodejs-authentication-api",
   "version": "1.0.0",
   "description": "A simple nodejs api for authentication with passport and JWT",
   "main": "index.js",
